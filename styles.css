@@ -1,0 +1,152 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    flex: 1;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid blue;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.header,
+.footer,
+.block-1 {
+    background-color: #1F2937;
+    color: white;
+    margin: 0;
+}
+
+.header {
+    border: 2px solid yellow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 8px;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+.header-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f9faf8;
+}
+
+
+.block {
+    display: flex;
+    border: 1px solid red;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.block-padding {
+    display: flex;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+.block-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    
+}
+
+.left {
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+ 
+
+}
+
+.right {
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.block-2,
+.block-4 {
+    display: flex;
+    flex: 1;
+}
+
+.block-3 {
+    background-color: #e5e7eb;
+    display: flex;
+    flex: 1;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 1;
+    flex-grow: 1;
+
+}
+
+img { /*Tengo que cambiar esto para que crezca y se encoja*/
+    display: flex;
+    flex: 1;
+    width: 100%;
+    max-height: 75%;
+    min-width: auto;
+    min-height: auto;
+ 
+}
+
+
+ul {
+    display: flex;
+    gap: 50px;
+    list-style-type: none;
+    color: #e5e7eb;
+
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bolder;
+    color: #f9faf8;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 18px;
+    color: #e5e7eb;
+}
+
+button {
+    background-color: #3882f6;
+    padding: 1% 4%;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    ;
+}
