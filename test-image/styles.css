@@ -5,20 +5,15 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    flex-wrap: wrap;
-
-
 }
 
 .blocks {
-    height: 50%;
     width: 60%;
     background-color: lightblue;
-    padding: 100px 100px;
+    padding: 75px 25px;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 100px;
     flex-wrap: wrap-reverse;
     gap: 15px;
 }
@@ -29,20 +24,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: column wrap;
-    height: 300px;
     width: 350px;
     margin: auto 25px;
+    min-height: 300px;
+
 }
 
 .blocks .right {
-   
-    flex-wrap: wrap;
-
+    height: 300px;
 
 }
 .blocks .left {
-    min-height: 300px;
 }
 
 p {
@@ -60,5 +52,4 @@ p {
 img {
     display: block;
     width: 100%;
-    height: auto;
 }
