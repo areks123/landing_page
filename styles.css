@@ -1,29 +1,29 @@
 /*OVERAL STRUCTURE*/
-
-/*Necesito prevenir el shrinking de los blocks*/
+/*Hacer que los elementos puedan hacer shrink más facilmente*/
+/*Problemente hacer que los bloques 2-4puedan hacer wrap*/
 
 body {
     display: flex;
     flex-direction: column;
     margin: 0;
+    flex: 1;
     height: 100vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    flex: 1; /* Hace que srhinkeen todos los blocks*/
+    height: 100vh;
 }
 
-
+/* Tengo que editar esto para que el contendio pegue con la altura del buscador*/
 .block {
     display: flex;
-    flex-shrink: 0;
-    flex-grow: 1;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-shrink: 1;
     width: 100%;
 }
 
@@ -59,11 +59,12 @@ body {
     padding-right: 15%;
     gap: 25px;
     padding-top: 25px;
-    padding-bottom: 45px;
+    padding-bottom: 25px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-}
+height: auto
+;}
 
 .block-1 {
     justify-content: center;
@@ -71,7 +72,13 @@ body {
     flex: 1;
 }
 
-
+.left {
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
 
 /*BLOCK 2*/
 .block-2 {
@@ -79,28 +86,25 @@ body {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    min-height: 150px;
     margin: 0;
-    padding-bottom: 25px;
-    background-color: lightblue;
+    padding-bottom: 30px;
+    /*background-color: lightblue;*/
 }
 
 .title {
-    background-color: lightseagreen;
-    padding-top: 5px;
+    /*background-color: lightseagreen;*/
+    padding-top: 0;
     padding-bottom: 0;
 }
 
 .squares-container {
     display: flex;
     gap: 25px;
-    padding: 5px;
     flex-wrap: wrap;
     flex: 1;
     padding-left: 25%;
     padding-right: 25%;
     padding-top: 10px;
-    min-height: 0;
     background-color: lightcoral;
     align-items: flex-start;
 }
@@ -117,8 +121,8 @@ body {
 .square {
     border: 2px solid #3882f6;
     border-radius: 5px;
-    height: 85px;
-    width: 85px;
+    height: 75px;
+    width: 75px;
 }
 
 .square-bottom {
@@ -139,6 +143,83 @@ body {
 
 .block-3 {
     background-color: #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    padding: 35px 0;
+}
+
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    background-color: yellow;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.top-quote {
+    background-color: pink;
+}
+
+.bottom-quote {
+    background-color: blanchedalmond;
+    padding-top: 5px;
+    display: flex;
+}
+
+/*BLOCK 4*/
+
+.block-4 {
+    display: flex;
+    padding: 35px 0;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+
+}
+
+.blue-thing-container {
+    display: flex;
+    flex: 1;
+    padding: 0 15%;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+
+.blue-thing {
+    display: flex;
+    background-color: #3882f6;
+    flex: 1;
+    min-height: 65px;
+    border-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 65px;
+    flex-wrap: wrap;
+}
+
+.blue-thing-text {
+    padding: 0;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    flex: 1;
+    min-width: 250px;
+}
+
+.blue-thing-button {
+    border: 1px solid white;
+    margin-left: 12px;
+}
+
+.bottom-text {
+    font-size: smaller;
 }
 
 /*FOOTER*/
@@ -147,7 +228,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 24px;
+    padding: 20px;
 }
 
 /*TYPES*/
@@ -161,11 +242,12 @@ ul {
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 32px;
     font-weight: bolder;
     color: #f9faf8;
     margin: 0;
     padding: 0;
+    line-height: 40px;
 }
 
 h2 {
@@ -177,16 +259,41 @@ h2 {
     padding-bottom: 10px;
 }
 
+h3 {
+    margin: 0;
+    color: white;
+    font-size: large;
+    font-weight: 800;
+}
+
 p {
     font-size: 18px;
     color: #e5e7eb;
+    margin: 0;
+    padding: 0;
 }
 
+#quote {
+    font-size: 16px;
+    font-weight: 50;
+    font-style: italic;
+    color: #1f2937;
+}
 
+small {
+    font-size: 10px;
+}
+
+#caption {
+    font-size: 12px;
+    color: #1f2937;
+    font-weight: 550;
+    vertical-align: top;
+}
 
 button {
     background-color: #3882f6;
-    padding: 1% 4%;
+    padding: 2% 5%;
     border: none;
     border-radius: 5px;
     color: white;
@@ -195,7 +302,8 @@ button {
 
 img {
     display: block;
-    width: 75%;
+    width: 45%;
     min-width: 325px;
+    max-height: 12%;
     margin: 0 auto;
 }
